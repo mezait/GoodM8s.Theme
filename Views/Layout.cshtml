@@ -1,0 +1,17 @@
+﻿@{
+    SetMeta("viewport", "width=device-width, initial-scale=1.0");
+    Style.Include("//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css");
+    Style.Include("site.css");
+    Script.Require("ShapesBase");
+    Script.Include("//code.jquery.com/jquery-1.11.0.min.js").AtFoot();
+    Script.Include("//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js").AtFoot();
+    using (Script.Foot()) {
+         <script type="text/javascript">
+             $('[data-toggle="tooltip"]').tooltip({ 'placement': 'top' });
+         </script>
+     }
+}
+@if (Model.Navigation != null) {
+    @Display(Model.Navigation)
+}
+@Display(Model.Content)

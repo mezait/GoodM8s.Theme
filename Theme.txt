@@ -1,0 +1,7 @@
+Name: GoodM8s
+Author: Meza Information Technology
+Website: http://www.goodm8s.com.au
+Description: GoodM8s Bootstrap theme.
+Version: 1.0
+# todo: provide tags
+# Tags: Classic, Serif
