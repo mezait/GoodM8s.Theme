@@ -1,0 +1,37 @@
+﻿@using Orchard.Mvc.Html;
+@using Orchard.UI.Resources;
+@{
+    RegisterLink(new LinkEntry { Type = "image/x-icon", Rel = "apple-touch-icon", Href = Url.Content("~/themes/GoodM8s/Content/favico/apple-touch-icon-57x57.png") }.AddAttribute("Sizes", "57x57"));
+    RegisterLink(new LinkEntry { Type = "image/x-icon", Rel = "apple-touch-icon", Href = Url.Content("~/themes/GoodM8s/Content/favico/apple-touch-icon-114x114.png") }.AddAttribute("Sizes", "114x114"));
+    RegisterLink(new LinkEntry { Type = "image/x-icon", Rel = "apple-touch-icon", Href = Url.Content("~/themes/GoodM8s/Content/favico/apple-touch-icon-72x72.png") }.AddAttribute("Sizes", "72x72"));
+    RegisterLink(new LinkEntry { Type = "image/x-icon", Rel = "apple-touch-icon", Href = Url.Content("~/themes/GoodM8s/Content/favico/apple-touch-icon-144x144.png") }.AddAttribute("Sizes", "144x144"));
+    RegisterLink(new LinkEntry { Type = "image/x-icon", Rel = "apple-touch-icon", Href = Url.Content("~/themes/GoodM8s/Content/favico/apple-touch-icon-60x60.png") }.AddAttribute("Sizes", "60x60"));
+    RegisterLink(new LinkEntry { Type = "image/x-icon", Rel = "apple-touch-icon", Href = Url.Content("~/themes/GoodM8s/Content/favico/apple-touch-icon-120x120.png") }.AddAttribute("Sizes", "120x120"));
+    RegisterLink(new LinkEntry { Type = "image/x-icon", Rel = "apple-touch-icon", Href = Url.Content("~/themes/GoodM8s/Content/favico/apple-touch-icon-76x76.png") }.AddAttribute("Sizes", "76x76"));
+    RegisterLink(new LinkEntry { Type = "image/x-icon", Rel = "apple-touch-icon", Href = Url.Content("~/themes/GoodM8s/Content/favico/apple-touch-icon-152x152.png") }.AddAttribute("Sizes", "152x152"));
+    RegisterLink(new LinkEntry { Type = "image/png", Rel = "icon", Href = Url.Content("~/themes/GoodM8s/Content/favico/favicon-192x192.png") }.AddAttribute("Sizes", "192x192"));
+    RegisterLink(new LinkEntry { Type = "image/png", Rel = "icon", Href = Url.Content("~/themes/GoodM8s/Content/favico/favicon-160x160.png") }.AddAttribute("Sizes", "160x160"));
+    RegisterLink(new LinkEntry { Type = "image/png", Rel = "icon", Href = Url.Content("~/themes/GoodM8s/Content/favico/favicon-96x96.png") }.AddAttribute("Sizes", "96x96"));
+    RegisterLink(new LinkEntry { Type = "image/png", Rel = "icon", Href = Url.Content("~/themes/GoodM8s/Content/favico/favicon-16x16.png") }.AddAttribute("Sizes", "16x16"));
+    RegisterLink(new LinkEntry { Type = "image/png", Rel = "icon", Href = Url.Content("~/themes/GoodM8s/Content/favico/favicon-32x32.png") }.AddAttribute("Sizes", "32x32"));
+    Script.Include("html5.js").UseCondition("lt IE 9").AtHead();
+
+    string title = Convert.ToString(Model.Title);
+    string siteName = Convert.ToString(WorkContext.CurrentSite.SiteName);
+}
+<!DOCTYPE html> 
+<html lang="@WorkContext.CurrentCulture" class="static @Html.ClassForPage()"> 
+<head> 
+    <meta charset="utf-8" />
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-TileImage" content="/themes/GoodM8s/Content/favico/mstile-144x144.png">
+    <title>@Html.Title(title, siteName)</title> 
+    @Display(Model.Head)
+    <script>        (function (d) { d.className = "dyn" + d.className.substring(6, d.className.length); })(document.documentElement);</script> 
+</head> 
+<body>
+@* Layout (template) is in the Body zone @ the default position (nothing, zero, zilch) *@
+@Display(Model.Body)
+@Display(Model.Tail)
+</body>
+</html>

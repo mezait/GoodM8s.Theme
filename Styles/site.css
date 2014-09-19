@@ -4,4 +4,5 @@
 
 .summary-container {
     background: url('/Themes/GoodM8s/Content/goodm8s-basketball-logo.png') no-repeat right bottom;
+    min-height: 210px;
 }
