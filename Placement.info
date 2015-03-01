@@ -1,4 +1,3 @@
-<Placement>
   <!-- Customize where the shapes are rendered -->
 
   <!-- 
@@ -14,4 +13,11 @@
     <Place Parts_Common_Metadata="-"/>
   </Match>
 -->
+<Placement>
+    <Match DisplayType="Detail">
+        <Place Parts_Common_Metadata="-"/>
+    </Match>
+    <Match DisplayType="Summary">            
+        <Place Parts_Common_Metadata="-"/>
+    </Match>
 </Placement>
