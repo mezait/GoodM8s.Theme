@@ -5,3 +5,4 @@ Description: GoodM8s Bootstrap theme.
 Version: 1.0
 # todo: provide tags
 # Tags: Classic, Serif
+Zones: Navigation, BeforeContent, Content, AfterContent
