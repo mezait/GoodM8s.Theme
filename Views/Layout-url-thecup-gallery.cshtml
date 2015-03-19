@@ -4,6 +4,10 @@
     Style.Include("site.css");
     Script.Require("jQuery").AtFoot();
     Script.Include("//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js").AtFoot();
+    Style.Include("//blueimp.github.io/Gallery/css/blueimp-gallery.min.css");
+    Style.Include("Styles/bootstrap-image-gallery.min.css");
+    Script.Include("//blueimp.github.io/Gallery/js/jquery.blueimp-gallery.min.js").AtFoot();
+    Script.Include("bootstrap-image-gallery.min.js").AtFoot();
     using (Script.Foot()) {
          <script type="text/javascript">
              $('[data-toggle="tooltip"]').tooltip({ 'placement': 'top' });
